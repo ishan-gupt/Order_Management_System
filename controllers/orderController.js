@@ -38,7 +38,7 @@ const userCheck = async (req, res) => {
     const { contact } = req.body;
     const userExist = await User.findOne({ contact });
     if (userExist) {
-      res.status(200).json(admin);
+      res.status(200).json(userExist);
     } else {
       res.status(401).json({ error: "User does not exist" });
     }
