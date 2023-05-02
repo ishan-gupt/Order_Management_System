@@ -5,8 +5,8 @@ const {
   placeOrder,
   userCheck,
   userSignup,
-} = require("../controllers/orderController");
-const { adminSignup, adminLogin } = require("../controllers/adminController");
+} = require("./controllers/orderController");
+const { adminSignup, adminLogin } = require("./controllers/adminController");
 
 router.post("/orders/", placeOrder);
 router.get("/orders/:storeid", getAllOrders);
